@@ -16,9 +16,11 @@ RUN mkdir /build/
 COPY ./siteweb/* /build/
 COPY ./siteweb/.docker/* /build/
 
-# Les données de l'ontologie ne sont nécessaires que pour la documentation du profil d'application et de l'ontologie
-
+RUN mkdir -p /tmp/ontologie
 COPY ./ontologie/ /tmp/ontologie/
+
+
+
 
 # Configuration des locales en français pour avoir une génération de date en français
 
